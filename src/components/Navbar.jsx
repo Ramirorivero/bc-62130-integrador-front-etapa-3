@@ -9,7 +9,7 @@ import "./Navbar.scss";
         <li id="electronic-conteiner" className="nav-bar__nav-item">
         <p className="nombre-parrafo">Electronic Web</p>
         <img
-          src="/logo.png"
+          src="/img/logo.png"
           alt="Electronic"
           className="nav-bar__logo"
         />
