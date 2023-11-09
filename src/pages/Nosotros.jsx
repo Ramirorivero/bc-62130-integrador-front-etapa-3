@@ -6,7 +6,7 @@ const Nosotros = () => {
     <div className="imagen-conteiner">
       <img
         className="imagen-conteiner__heading"
-        src="/public/img/nosotros.jpeg"
+        src="/img/nosotros.jpeg"
         alt="cabecera"
       />
     </div>
@@ -128,7 +128,7 @@ const Nosotros = () => {
         <div className="bloque-conteiner__imagen">
           <img
             className="bloque-conteiner__imagen-img"
-            src="/public/img/innovacion2.jpeg"
+            src="/img/innovacion2.jpeg"
             alt="innovacion1"
           />
           <img
@@ -199,12 +199,12 @@ const Nosotros = () => {
           <img
             id="innovacion1"
             className="bloque-conteiner__imagen-img"
-            src="/public/img/planta.jpeg"
+            src="/img/planta.jpeg"
             alt="innovacion1"
           />
           <img
             className="bloque-conteiner__imagen-img"
-            src="/public/img/paisaje.jpeg"
+            src="/img/paisaje.jpeg"
             alt="innovacion2"
           />
         </div>
