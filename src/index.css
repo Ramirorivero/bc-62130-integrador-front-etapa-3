@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bakbak+One&family=Roboto+Condensed:wght@400;700&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+body {
+  font-family: "Bakbak One", cursive, sans-serif;
+  
+}
+
+p {
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: bold;
+}
+
+.contenedor-paginas{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

@@ -1,0 +1,123 @@
+.tarjeta-aeditar{
+    width: 500px;
+    overflow: hidden;  
+    
+    background-color: #206e8c;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2), 0 0 3px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    transition: all 0.3s;
+    color: #000;
+    border: 3px solid #000;
+    @media(max-width:1050px){
+        width: 400px;
+
+    }
+    @media (max-width: 640px) {
+        & {
+          
+          font-size: 13px;
+          
+          
+        }
+    }
+   
+  
+    &:hover{
+      transform: scale(1.03) skewX(0);
+      transform-origin: bottom;
+      box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.5), 0 3px 3px rgba(0, 0, 0, 0.5);
+      color: #000;
+      border: 5px solid #ff6a00 ;
+    
+    }
+    &:active{
+      color: #fff;
+      box-shadow: 10px 12px 12px #fff;
+      border: 4px solid #000;
+      background-color: #ff6a00;
+
+    }
+    &__heading{
+        font-size: 30px;
+        @media  (max-width: 768px) {
+            & {
+              
+              font-size: 20px;
+              
+            }
+        }
+    }
+   
+    &__image-container {
+        height: 350px;
+        overflow: hidden;
+       
+           @media (max-width: 475px) {
+            & {
+              
+              display: none;
+              
+            }
+        }
+      }
+    
+     
+    
+      &__image {
+        width: 100%;
+        height: 100%; 
+        object-fit: cover;
+        transition: 0.2s;
+      }
+    
+      &:hover &__image{
+        transform: scale(1.2) rotate(6deg);
+        transform-origin: center;
+      }
+    
+      &__content {
+        padding: 1em;
+      }
+    
+    
+    
+      @media  (max-width: 768px) {
+        & {
+          min-width: 400px;
+          max-width: 500px;
+          height: 300px;
+          
+        }
+       
+        
+    
+        &__article {
+         
+          display: flex;
+        }
+    
+        & &__image-container {
+          width: 70%;
+        }
+    
+        &:hover &__image-container 
+         {
+          width: 180%;
+          clip-path: none; 
+  
+        }
+    }
+    
+        &__detalles{
+          font-size: 18px;
+          margin-top: 14px;
+          @media  (max-width: 768px) {
+            & {
+              
+              font-size: 13px;
+              
+            }
+        }
+      }
+    
+    }

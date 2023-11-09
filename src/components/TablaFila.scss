@@ -1,0 +1,38 @@
+
+
+
+#img-row{
+  width: 100px;
+  height: 100px; /* 200px */
+  border-radius: 6px;
+}
+.detalles{
+    font-size: 14px;
+}
+
+.btn-editar , .btn-borrar{
+    background-color: #ff6a00;
+    color: #fff;
+    border-radius: 10px;
+    width: 100px;
+    height: 35px;
+    font: 900 17px "Bakbak One", cursive, sans-serif;
+    color: #232f3e;
+   
+   
+    
+  }
+  .btn-editar:hover,
+  .btn-borrar:hover {
+    background-color: #ffb310;
+    color: #fff;
+  }
+  .btn-editar:active,
+  .btn-borrar:active {
+    box-shadow: 8px 8px 8px #fff;
+    transform: translateY(2px) translateX(2px);
+  }
+  .btn-editar{
+    margin-bottom: 8px;
+}
+

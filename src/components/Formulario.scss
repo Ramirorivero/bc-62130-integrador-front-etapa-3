@@ -1,0 +1,92 @@
+
+  
+ 
+  
+  .form1 {
+    padding-top: 0px;
+    background-color: #f2e3cb;
+    width: 500px;
+    
+    
+  }
+  .primerfieldset1 {
+    text-align: center;
+    background-color: #206e8c;
+    border-radius: 10px;
+    border: 3px solid #000;
+  
+    &__elementobloque {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+    &__inputcajas {
+      width: 70%;
+      height: 25px;
+      border-radius: 3px;
+      border: 0.5px solid #4d6d63;
+      outline: none;
+      border-radius: 5px;
+    }
+    &__inputcajas:focus-within {
+      border: #000 solid 3px;
+    }
+    @media(max-width:1050px){
+      width: 400px;
+
+  }
+   
+    @media (max-width: 850px) {
+      & {
+        margin-bottom: 20px;
+      }
+    }
+    @media (max-width: 640px) {
+      & {
+        margin: 20px 50px;
+      }
+    }
+    @media (max-width: 475px) {
+      & {
+        margin: 20px 30px;
+      }
+    }
+    @media (max-width: 400px) {
+      & {
+        margin: 20px 10px;
+      }
+    }
+  }
+  .contenedorbotones1 {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    background-color: #206e8c; 
+    margin-bottom: 10px;
+    margin-top: 10px;
+    &__btn1,
+    &__btn2 {
+      background-color: #ff6a00;
+      color: #fff;
+      border-radius: 10px;
+      width: 150px;
+      height: 45px;
+      font: 900 19px "Bakbak One", cursive, sans-serif;
+      color: #232f3e;
+    }
+    &__btn1:hover,
+    &__btn2:hover {
+      background-color: #ffb310;
+      color: #fff;
+    }
+    &__btn1:active,
+    &__btn2:active {
+      box-shadow: 8px 8px 8px #fff;
+      transform: translateY(2px) translateX(2px);
+    }
+    @media (max-width: 1110px) {
+      justify-content: center;
+    }
+  }
+  

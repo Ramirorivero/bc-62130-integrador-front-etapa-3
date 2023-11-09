@@ -1,0 +1,57 @@
+.tituloh1-alta {
+   
+    padding-top: 120px; ;
+    color: #fff;
+    -webkit-text-stroke: 0.2px black;
+    font-size: 50px;
+    margin-left: 30px;
+    @media (max-width: 750px) {
+      & {
+        font-size: 35px;
+        margin: 15px 50px;
+        padding-top:60px ;
+      }
+    }
+    @media (max-width: 500px) {
+      & {
+        margin: 10px 30px;
+        font-size: 25px;
+      }
+    }
+  }
+  .tituloh2-alta {
+    margin-left: 30px;
+     color: #fff;
+     -webkit-text-stroke: 0.2px black;
+     font-size: 35px;
+  
+     @media (max-width: 750px) {
+       & {
+         font-size: 30px;
+         margin: 15px 50px;
+       }
+     }
+     @media (max-width: 500px) {
+       & {
+         margin: 10px 30px;
+         font-size: 20px;
+       }
+     }
+   }
+   
+
+  .contenido-editar{
+    display: flex;
+    gap: 1em;
+    justify-content: space-around;
+    padding-bottom: 50px;
+    padding-top: 30px;
+    @media(max-width:770px){
+     display: block;
+     text-align: center;
+     margin: auto;
+    }
+    
+  }
+ 
+  
