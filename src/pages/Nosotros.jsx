@@ -133,7 +133,7 @@ const Nosotros = () => {
           />
           <img
             className="bloque-conteiner__imagen-img"
-            src="/public/img/innovacion-social.jpeg"
+            src="/img/innovacion-social.jpeg"
             alt="innovacion2"
           />
         </div>
