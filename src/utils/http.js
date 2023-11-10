@@ -81,7 +81,7 @@ export const del =async(url,id)=>{
   try{
     const respuesta = await fetch ( urlFuLL,config )
     if(!respuesta.ok){
-      throw new Error(`Algo paso: ${respuesta.status},${respuesta.statusText}`)
+      throw new Error(`Algo paso: ${respuesta.status} ${respuesta.statusText}`)
     }
      const resultado = await respuesta.json()
      return resultado

@@ -46,7 +46,7 @@ const TablaFila = ({producto, setProductoAEditar}) => {
             </td>
            <td className='contenedorbtn-tabla'>
             <button className='btn-editar' onClick={()=> {handleUpdate(producto);subirATarjetaAEditar() }}>Editar</button>
-            <button onClick={()=>handleDelete(producto._id)} className='btn-borrar'>Borrar</button>
+            <button onClick={()=>handleDelete(producto.id)} className='btn-borrar'>Borrar</button>
             </td>
     </tr>
   )
