@@ -3,8 +3,8 @@ import {del, get, post, put} from "../utils/http";
 
 const ProductoContext = createContext()
 
-const  url = 'https://ramiro-rivero-etapa-3.onrender.com/api/productos'
-//'https://ramiro-rivero-etapa-3.onrender.com/api/productos'
+const  url = 'https://ramiro-rivero-etapa-3.onrender.com/api/productos/'
+//'https://ramiro-rivero-etapa-3.onrender.com/api/productos/'
 //'http://localhost:8080/api/productos/'
 
 const ProductoProvider = ( {children} ) => {
