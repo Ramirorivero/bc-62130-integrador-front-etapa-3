@@ -9,6 +9,14 @@ const DragDrop = ({setFoto ,setSrcImagen, srcImagen}) => {
     document.body.addEventListener(eventName, e => e.preventDefault())
   })
 
+  const handleEnter = () =>{
+     //console.log(' Una imagen ingreso a la zona de drop ')
+  }
+
+  const handleOver =() =>{
+    //console.log('Estpy sobre la zona de drop')
+  }
+
     const handleDrop = e =>{
       //console.log(e)
       const dataTransf = e.dataTransfer
@@ -61,7 +69,7 @@ const DragDrop = ({setFoto ,setSrcImagen, srcImagen}) => {
  
 
   return (
-    <div className='drop-area' onDrop={handleDrop}>
+    <div className='drop-area' onDrop={handleDrop} onDragEnter={handleEnter} onDragOver={handleOver}>
         <p>Subir imagen al servidor <b>file dialog</b> o con <b>dentro del area punteada</b></p>
         <input type="file" id='lbl-foto' accept='image/*' onChange={handleChange} />
         <label htmlFor="lbl-foto" className='drop-area-button'>

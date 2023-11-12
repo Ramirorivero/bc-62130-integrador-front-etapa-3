@@ -5,7 +5,7 @@ import { post } from "../utils/http";
 const CarritoContext = createContext()
 
 
- const url = 'https://ramiro-rivero-etapa-3.onrender.com/api/carritos/'
+const url = 'https://ramiro-rivero-etapa-3.onrender.com/api/carritos/'
 //const url = 'http://localhost:8080/api/carritos/'
 
 const CarritoProvider = ({children})=>{
