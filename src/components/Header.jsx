@@ -1,20 +1,23 @@
 import { Link } from "react-router-dom";
 import "./Header.scss";
 import Navbar from "./Navbar";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import CarritoContext from "../contexts/CarritoContext";
 
 const Header = () => {
 const{carrito} =  useContext(CarritoContext)
+const [cantidadEnCarrito, setCantidadEnCarrito] = useState(0);
 
+useEffect(()=>{
+//const sumarCantidad = () =>{
+ // let calcularCantidad = carrito.reduce((total, prod)=>{
+  //  return total + (prod.cantidad)
+  //},0)
+ // return calcularCantidad
+ const calcularCantidad = carrito.reduce((total, prod) => total + prod.cantidad, 0);
+ setCantidadEnCarrito(calcularCantidad);
 
-const sumarCantidad = () =>{
-  let calcularCantidad = carrito.reduce((total, prod)=>{
-    return total + (prod.cantidad)
-  },0)
-  return calcularCantidad
-}
-
+},[carrito])
 
   return (
     <header className="main-header">
@@ -46,7 +49,7 @@ const sumarCantidad = () =>{
           <input type="submit" value="Buscar" className="search-bar__form-submit" />
         </form>
         <Link className="search-bar__carrito-container" to="/carrito" >
-        <p className="contador-cantidad"> {parseFloat(sumarCantidad())}</p>
+        <p className="contador-cantidad"> {parseFloat(cantidadEnCarrito)}</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="1em"
