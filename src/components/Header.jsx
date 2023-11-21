@@ -6,18 +6,17 @@ import CarritoContext from "../contexts/CarritoContext";
 
 const Header = () => {
 const{carrito} =  useContext(CarritoContext)
-const [cantidadEnCarrito, setCantidadEnCarrito] = useState(0);
 
-useEffect(()=>{
-//const sumarCantidad = () =>{
- // let calcularCantidad = carrito.reduce((total, prod)=>{
-  //  return total + (prod.cantidad)
-  //},0)
- // return calcularCantidad
- const calcularCantidad = carrito.reduce((total, prod) => total + prod.cantidad, 0);
- setCantidadEnCarrito(calcularCantidad);
 
-},[carrito])
+const sumarCantidad = () =>{
+  let calcularCantidad = carrito.reduce((total, prod)=>{
+   return total + (prod.cantidad)
+  },0)
+ return calcularCantidad
+
+
+
+}
 
   return (
     <header className="main-header">
@@ -49,7 +48,7 @@ useEffect(()=>{
           <input type="submit" value="Buscar" className="search-bar__form-submit" />
         </form>
         <Link className="search-bar__carrito-container" to="/carrito" >
-        <p className="contador-cantidad"> {parseFloat(cantidadEnCarrito)}</p>
+        <p className="contador-cantidad"> {parseFloat(sumarCantidad())}</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="1em"
