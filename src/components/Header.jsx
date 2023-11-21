@@ -9,8 +9,8 @@ const{carrito} =  useContext(CarritoContext)
 
 
 const sumarCantidad = () =>{
-  let calcularCantidad = carrito.reduce((prod)=>{
-    return (prod.cantidad)
+  let calcularCantidad = carrito.reduce((total, prod)=>{
+    return total + (prod.cantidad)
   },0)
   return calcularCantidad
 }
