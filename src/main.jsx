@@ -12,6 +12,7 @@ import Carrito from './pages/Carrito'
 
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
+import * as bootstrap from 'bootstrap'
 
 import { ProductoProvider } from './contexts/ProductoContext'
 import { CarritoProvider } from './contexts/CarritoContext'

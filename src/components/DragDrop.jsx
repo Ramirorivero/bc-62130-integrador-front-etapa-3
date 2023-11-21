@@ -1,7 +1,12 @@
+import { useState } from 'react'
 import { post } from '../utils/http'
 import './DragDrop.scss'
 
 const DragDrop = ({setFoto ,setSrcImagen, srcImagen}) => {
+ const [dragOver, setDragOver] = useState(false)
+  
+ 
+ 
   // ! Canceladno comportamiento por defecto del navegador
 
   const arrayEventos = ['dragenter', 'dragleave', 'dragover','drop' ]
@@ -11,14 +16,22 @@ const DragDrop = ({setFoto ,setSrcImagen, srcImagen}) => {
 
   const handleEnter = () =>{
      //console.log(' Una imagen ingreso a la zona de drop ')
+     setDragOver(true)
   }
 
-  const handleOver =() =>{
-    //console.log('Estpy sobre la zona de drop')
+  const handleOver =(e) =>{
+    //console.log('Estoy sobre la zona de drop')
+  //e.preventDefault()
+  setDragOver(true)
   }
+  const handleLeave =()=>{
+    setDragOver(false)
+  }
+
 
     const handleDrop = e =>{
       //console.log(e)
+      setDragOver(false)
       const dataTransf = e.dataTransfer
       const files = dataTransf.files
       handleFiles(files)
@@ -26,6 +39,7 @@ const DragDrop = ({setFoto ,setSrcImagen, srcImagen}) => {
     const handleChange = e =>{
         //console.log(e)
         //console.log(e.target.files)
+        
         const files = e.target.files
         handleFiles(files)
     }
@@ -65,14 +79,14 @@ const DragDrop = ({setFoto ,setSrcImagen, srcImagen}) => {
 
     }
  
-
+const dropAreaClass =`drop-area ${dragOver ? 'drag-over' : ''}`
  
 
   return (
-    <div className='drop-area' onDrop={handleDrop} onDragEnter={handleEnter} onDragOver={handleOver}>
-        <p>Subir imagen al servidor <b>file dialog</b> o con <b>dentro del area punteada</b></p>
+    <div className={dropAreaClass} onDragLeave={handleLeave} onDrop={handleDrop} onDragEnter={handleEnter} onDragOver={handleOver}>
+        <p  >Subir imagen al servidor <b>file dialog</b> o con <b>dentro del area punteada</b></p>
         <input type="file" id='lbl-foto' accept='image/*' onChange={handleChange} />
-        <label htmlFor="lbl-foto" className='drop-area-button'>
+        <label  htmlFor="lbl-foto" className='drop-area-button'>
             File Dialog
         </label>
         <div className='drop-area-image'>

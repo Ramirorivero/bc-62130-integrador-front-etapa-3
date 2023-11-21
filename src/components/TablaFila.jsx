@@ -1,20 +1,32 @@
 import { useContext } from 'react'
 import './TablaFila.scss'
 import ProductoContext from '../contexts/ProductoContext'
+import Swal from 'sweetalert2'
+import 'sweetalert2/dist/sweetalert2.css'
 
 const TablaFila = ({producto, setProductoAEditar}) => {
   const {eliminarProductoContext} = useContext(ProductoContext)
   
-  const handleDelete = (id) => {
+  const handleDelete = async (id) => {
    
-    let isDelete= window.confirm(`
-    ¿Estas seguro de eliminar el producto con el 'id':${id}
-    `)
-    
-    if(isDelete){
+   // let isDelete= window.confirm(`
+   // ¿Estas seguro de eliminar el producto con el 'id':${id}
+    //`)
+    const isDelete = await Swal.fire({
+      title: `¿Estás seguro que queire elimiar ${producto.nombre}?`,
+      text: '¡Esta acción no se puede deshacer!',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sí, estoy seguro',
+    });
+
+    if(isDelete.isConfirmed){
       eliminarProductoContext(id)
+      Swal.fire('¡Confirmado!', 'La acción se completó con éxito.', 'success');
     }else{
-      return
+      return 
     }
   }
  const handleUpdate = (producto) => {

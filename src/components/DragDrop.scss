@@ -1,22 +1,38 @@
 .drop-area{
-    border: 2px dashed #ccc;
+    border: 2px dashed #fff;
     border-radius: 20px;
     width: 300px;
     margin: 25px 0;
     padding: 20px;
+    color: #fff;
+    margin-left: 100px;
 
      & p{
-       margin: 30px;
+       margin: 10px;
+       padding-bottom: 30px;
     }
  &-button{
-    display: inline-block;
+    
     padding: 10px;
-    background-color: #ccc;
     cursor: pointer;
-     border-radius: 5px;
-     border: 1px solid #ccc;
-     margin-bottom: 30px;
+    background-color: #ff6a00;
+    border-radius: 10px;
+    width: 100px;
+    height: 35px;
+    font: 900 17px "Bakbak One", cursive, sans-serif;
+    color: #232f3e;
+    border: solid 2px #232f3e;
+    
  }
+ &-button:hover {
+   background-color: #ffb310;
+   color: #fff;
+ }
+ &-button:active {
+   box-shadow: 8px 8px 8px #fff;
+   transform: translateY(2px) translateX(2px);
+ }
+
  
  & #lbl-foto{
     display: none;
@@ -26,5 +42,12 @@
     margin-top: 10px;
     margin-right: 10px;
     vertical-align: middle;
+    border-radius: 6px;
+    margin-top: 30px;
  }
+}
+.drag-over{
+   border: 5px dashed #ff6a00;
+   background-color: #232f3e;
+   
 }

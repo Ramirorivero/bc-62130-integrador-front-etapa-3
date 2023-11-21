@@ -5,6 +5,7 @@ import ProductoContext from '../contexts/ProductoContext'
 import { useForm } from '../hooks/useForm'
 import DragDrop from './DragDrop'
 
+
 const formInicial={
   id:null,
   nombre:'',
@@ -66,6 +67,7 @@ if(productoAEditar){
  }
 
 
+
   return (
     <>
 
@@ -75,6 +77,7 @@ if(productoAEditar){
         <div>
           <label htmlFor="lbl-nombre" className='primerfieldset1__elementobloque'>Nombre</label>
           <input className='primerfieldset1__inputcajas' type="text" name="nombre" id="lbl-nombre" value={form.nombre} onChange={handleChange} />
+      
         </div>
         <div>
           <label htmlFor="lbl-precio" className='primerfieldset1__elementobloque'>Precio</label>
